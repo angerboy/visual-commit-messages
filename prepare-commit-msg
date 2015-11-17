@@ -1,8 +1,11 @@
 #!/bin/sh
 
+# Use the current commit message as the file name
 MOVIE_FILE_NAME="$(cat $1 | sed -e 's/ /_/g').mov"
 
+# command for audio recording
 #sox -d $AUDIO_FILE_NAME
 
+# call movie recording script
 osascript .git/hooks/movie_record.scpt $MOVIE_FILE_NAME 5
 
