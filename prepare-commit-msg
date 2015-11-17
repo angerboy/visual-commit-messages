@@ -1,0 +1,8 @@
+#!/bin/sh
+
+MOVIE_FILE_NAME="$(cat $1 | sed -e 's/ /_/g').mov"
+
+#sox -d $AUDIO_FILE_NAME
+
+osascript .git/hooks/movie_record.scpt $MOVIE_FILE_NAME 5
+
